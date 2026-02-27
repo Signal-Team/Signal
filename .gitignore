@@ -13,6 +13,8 @@ Thumbs.db
 .classpath
 
 # Claude Code
+.claude/
+.vscode/
 fronted/.claude/
 fronted/.vscode/
 
