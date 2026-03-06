@@ -14,6 +14,7 @@ import {
   ChevronUp,
   RefreshCw,
 } from 'lucide-react';
+import { TrendChart } from '@/components/signal/TrendChart';
 import type { KeywordSet, GeneratedReport } from '@/types';
 
 function AccordionItem({
@@ -237,6 +238,13 @@ export default function TrackerDetailPage() {
                 <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">핵심 질문</p>
                 <p className="text-gray-800 font-medium">{keywordSet.question}</p>
               </div>
+
+              {keywordSet.chart_labels && keywordSet.chart_data && keywordSet.chart_labels.length > 0 && (
+                <div className="mb-5">
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">트렌드 차트</p>
+                  <TrendChart labels={keywordSet.chart_labels} data={keywordSet.chart_data} />
+                </div>
+              )}
 
               {keywordSet.ai_one_liner ? (
                 <div className="border-l-4 border-indigo-500 bg-indigo-50 rounded-r-xl p-4 mb-6">

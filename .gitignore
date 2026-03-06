@@ -20,4 +20,6 @@ fronted/.vscode/
 
 # Troubleshooting
 TROUBLESHOOTING.md
+DEV_NOTES.md
 
+node_modules
