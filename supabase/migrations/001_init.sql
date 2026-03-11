@@ -71,6 +71,8 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+-- 이미 존재하면 삭제 후 재생성 (재실행해도 에러 안 남)
+DROP TRIGGER IF EXISTS keyword_sets_updated_at ON keyword_sets;
 CREATE TRIGGER keyword_sets_updated_at
   BEFORE UPDATE ON keyword_sets
   FOR EACH ROW EXECUTE FUNCTION update_updated_at();
