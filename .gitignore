@@ -22,3 +22,7 @@ fronted/.vscode/
 TROUBLESHOOTING.md
 
 node_modules
+.next/
+.env.local
+.env*.local
+Signal/
